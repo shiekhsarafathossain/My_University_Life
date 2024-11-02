@@ -1,0 +1,102 @@
+Consider the following class diagram.
+
+Bus
+---------------
+-regNo: int
+-busName: String
+-busRoute: Route
+----------------
++Bus()
++Bus(int, String, Route)
++setRegNo(int): void
++setBusName(String): void
++getRefNo(): int
++getBusName(): String
++getBusRoute(): Route
++toString(): String
+
+Route
+-------------
+-routeNo: int
+-departureStop: String
+-arrivalStop: String
+--------------
++Route()
++Route(int, String, String)
++setRouteNo(int): void
++setDepartureStop(String): void
++setArrivalStop(String): void
++getRouteNo(): int
++getDepartureStop(): String
++getArrivalStop(): String
++toString(): String
+
+Assume that the above-mentioned classes have already been implemented. Also
+consider that you have a Main class and within the main() method in which the
+following array lists of Route and Bus type objects are created.
+
+ArrayList<Route> routes = new ArrayList<>();
+ArrayList<Bus> buses = new ArrayList<>();
+// adding few routes and buses
+routes.add(……);
+buses.add(……);
+
+
+a) Complete the above program in Java that writes all Bus type objects as
+created and held in buses ArrayList into a file named “buses.dat” using
+DataOutputStream class. You must write the data in the following format.
+
+regNo busName routeNo departureStop arrivalStop
+
+b) Do you need to change the class definition of the above-mentioned classes to
+write objects of those classes directly into a file using ObjectOutputStream
+class? If yes, what would be the change?
+
+ChatGPT Solution:
+==================================================================================
+a) To write all Bus type objects as created and held in buses ArrayList into a file named "buses.dat" using DataOutputStream class, you can use the following code:
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Route> routes = new ArrayList<>();
+        ArrayList<Bus> buses = new ArrayList<>();
+        // adding few routes and buses
+        routes.add(......);
+        buses.add(......);
+        
+        try (DataOutputStream dos = new DataOutputStream(new FileOutputStream("buses.dat"))) {
+            for (Bus bus : buses) {
+                dos.writeInt(bus.getRegNo());
+                dos.writeUTF(bus.getBusName());
+                dos.writeInt(bus.getBusRoute().getRouteNo());
+                dos.writeUTF(bus.getBusRoute().getDepartureStop());
+                dos.writeUTF(bus.getBusRoute().getArrivalStop());
+            }
+            System.out.println("Data written to buses.dat successfully.");
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        }
+    }
+}
+
+
+This program will create a new file named "buses.dat" and write all Bus type objects as created and held in buses ArrayList into the file using DataOutputStream class.
+
+b) Yes, we need to change the class definition of the above-mentioned classes to write objects of those classes directly into a file using ObjectOutputStream class. The change we need to make is that the Bus and Route classes need to implement the Serializable interface. This can be done by adding "implements Serializable" to the class declaration of Bus and Route, as shown below:
+
+import java.io.Serializable;
+
+public class Bus implements Serializable {
+    // existing class members and methods
+}
+
+public class Route implements Serializable {
+    // existing class members and methods
+}
+
+
+After making this change, we can use ObjectOutputStream class to write the Bus type objects directly into a file.
