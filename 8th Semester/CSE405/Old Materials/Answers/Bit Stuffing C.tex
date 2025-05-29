@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Set up header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Computer Networks}
+\fancyhead[R]{Bit Stuffing Problem}
+\fancyfoot[C]{Page \thepage}
+
+\begin{document}
+
+% Title
+\begin{center}
+    \LARGE \textbf{Bit Stuffing for a Given Bit Stream}
+\end{center}
+
+\noindent\textbf{Given Bit Stream:}
+\[
+\texttt{0101011111101000000101111101}
+\]
+
+\noindent\textbf{Procedure:}
+\begin{enumerate}
+    \item The technique of \textbf{bit stuffing} is used to prevent confusion with frame delimiters (e.g., \texttt{01111110}).
+    \item In this process, a \textbf{0 is inserted} after any sequence of \textbf{five consecutive `1's} to avoid interpreting it as a control flag.
+\end{enumerate}
+
+\noindent\textbf{Steps:}
+\begin{enumerate}
+    \item Start scanning the bit stream from the left.
+    \item Identify sequences of 5 consecutive `1's`.
+    \item Insert a `0` after each such sequence.
+\end{enumerate}
+
+\noindent\textbf{Applying to the Given Stream:}
+
+\begin{itemize}
+    \item In the given bit stream, the sequence \texttt{11111} occurs between the 6th and 11th bits.
+    \item Thus, a `0` is inserted after the 11th bit.
+\end{itemize}
+
+\begin{tcolorbox}[colback=blue!5, colframe=black, title=\textbf{Bit Stuffing Example}]
+Original bit stream: \texttt{0101011111101000000101111101}
+
+Stuffed bit stream: \texttt{010101111110\textcolor{red}{0}1000000101111101}
+\end{tcolorbox}
+
+\noindent The inserted bit is marked in \textcolor{red}{\textbf{red}}.
+
+\noindent\textbf{Final Stuffed Bit Stream:}
+\[
+\boxed{\texttt{010101111110\textcolor{red}{0}1000000101111101}}
+\]
+
+\noindent \textbf{Conclusion:} After applying bit stuffing, a `0` is inserted after the sequence of five consecutive `1's` in the bit stream.
+
+\end{document}

@@ -1,0 +1,73 @@
+network 200.168.10.0 0.0.0.255 area 1
+network 200.168.20.0 0.0.0.255 area 1
+network 200.168.30.0 0.0.0.255 area 1
+network 200.168.40.0 0.0.0.255 area 1
+network 200.168.50.0 0.0.0.255 area 1
+network 200.168.60.0 0.0.0.255 area 1
+
+network 150.10.0.0 0.0.255.255 area 1
+network 150.20.0.0 0.0.255.255 area 1
+network 150.30.0.0 0.0.255.255 area 1
+network 150.40.0.0 0.0.255.255 area 1
+network 150.50.0.0 0.0.255.255 area 1
+network 150.60.0.0 0.0.255.255 area 1
+network 150.70.0.0 0.0.255.255 area 1
+network 150.80.0.0 0.0.255.255 area 1
+
+network 100.0.0.0 0.255.255.255 area 1
+
+
+//Router 1
+router ospf 1
+
+network 200.168.20.0 0.0.0.255 area 1
+network 200.168.30.0 0.0.0.255 area 1
+network 200.168.40.0 0.0.0.255 area 1
+
+network 200.168.20.0 0.0.0.255 area 1
+
+//Router 2
+
+router ospf 2
+
+network 150.30.0.0 0.0.255.255 area 1
+network 150.60.0.0 0.0.255.255 area 1
+network 150.70.0.0 0.0.255.255 area 1
+
+network 200.168.40.0 0.0.0.255 area 1
+
+//Router 3
+
+router ospf 3
+network 200.168.60.0 0.0.0.255 area 1
+
+network 150.10.0.0 0.0.255.255 area 1
+network 150.20.0.0 0.0.255.255 area 1
+network 150.50.0.0 0.0.255.255 area 1
+network 150.60.0.0 0.0.255.255 area 1
+network 150.80.0.0 0.0.255.255 area 1
+
+
+
+//router 4
+router ospf 4
+network 200.168.30.0 0.0.0.255 area 1
+network 150.40.0.0 0.0.255.255 area 1
+network 150.50.0.0 0.0.255.255 area 1
+
+//router 5 
+router ospf 5
+network 200.168.50.0 0.0.0.255 area 1
+
+network 150.70.0.0 0.0.255.255 area 1
+network 150.80.0.0 0.0.255.255 area 1
+
+
+
+//router 6
+
+router ospf 6
+network 200.168.10.0 0.0.0.255 area 1
+
+network 150.10.0.0 0.0.255.255 area 1
+network 100.0.0.0 0.255.255.255 area 1

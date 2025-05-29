@@ -1,0 +1,65 @@
+```latex
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\title{Computer Networks Quiz: Bit Stuffing Solution (Verified)}
+\author{Claude}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem}
+What would be the bit pattern of the following bit stream after "Bit Stuffing"? Please indicate the stuffed bit.
+
+\begin{center}
+\texttt{0101011111101000000101111101}
+\end{center}
+
+\section*{Solution}
+In bit stuffing, a '0' bit is inserted after every sequence of five consecutive '1' bits. This is done to prevent the accidental occurrence of the flag sequence (usually 01111110) within the data.
+
+Let's apply bit stuffing to the given bit stream:
+
+\begin{center}
+\tikz[baseline]{\node[anchor=base,draw=blue!30,rounded corners,inner sep=1ex]{
+\texttt{0101011111\color{red}{\textbf{0}}101000000101111\color{red}{\textbf{0}}101}
+};}
+\end{center}
+
+The \textcolor{red}{\textbf{red}} bits are the stuffed bits.
+
+\section*{Step-by-Step Verification}
+Let's verify the solution step by step:
+
+1. Original bit stream: \texttt{0101011111101000000101111101}
+
+2. Find the first sequence of five consecutive '1' bits:
+   \texttt{01010\underline{11111}101000000101111101}
+   
+   Insert a '0' after this sequence:
+   \texttt{0101011111\color{red}{\textbf{0}}101000000101111101}
+
+3. Continue scanning and find the next sequence of five '1' bits:
+   \texttt{0101011111\color{red}{\textbf{0}}1010000001\underline{11111}01}
+   
+   Insert another '0' after this sequence:
+   \texttt{0101011111\color{red}{\textbf{0}}101000000101111\color{red}{\textbf{0}}101}
+
+4. No more sequences of five consecutive '1' bits remain.
+
+\section*{Final Result}
+The bit pattern after bit stuffing is:
+
+\begin{center}
+\fbox{\texttt{0101011111\color{red}{\textbf{0}}101000000101111\color{red}{\textbf{0}}101}}
+\end{center}
+
+\textit{Note: The stuffed bits are highlighted in \textcolor{red}{red} for clarity.}
+
+\end{document}
+```

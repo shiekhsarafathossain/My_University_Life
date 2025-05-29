@@ -1,0 +1,1 @@
+1.	If a device's MAC (Media Access Control) address is worldwide unique by which we can easily identify a device or host then why do we need IPv4 address or IP address?

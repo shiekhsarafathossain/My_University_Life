@@ -1,0 +1,134 @@
+//for router 6
+
+interface fa0/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface fa1/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se2/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+
+//for router 3
+
+interface fa0/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se2/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se3/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se6/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se7/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se8/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+
+//for router 5
+
+interface fa0/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se3/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se2/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+
+
+//for router 2
+
+interface fa0/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se2/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se6/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se3/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+
+//for router 4
+
+interface fa0/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se2/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se3/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+
+
+//for router 1
+
+interface fa0/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se2/0
+ip helper-address 100.1.0.0
+clock rate 64000
+no shut
+do wr
+
+interface se3/0
+ip helper-address 100.1.0.0
+no shut
+do wr
+
+interface se6/0
+ip helper-address 100.1.0.0
+no shut
+do wr

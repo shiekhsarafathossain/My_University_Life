@@ -1,0 +1,81 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Set up header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{Computer Networks}}
+\fancyhead[R]{\textbf{Bit Stuffing Example}}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+\title{\textbf{Bit Stuffing of a Bit Stream}}
+\author{Prepared by: Expert Note Maker}
+\date{\today}
+\maketitle
+
+% Introduction
+\section*{Introduction to Bit Stuffing}
+Bit stuffing is a technique used in communication protocols to avoid confusion between data and control information. It ensures that the flag sequence used to mark the start and end of a frame (commonly \texttt{01111110} in HDLC) does not appear in the transmitted data.
+
+To achieve this, whenever a sender encounters five consecutive 1's in the data stream, it automatically inserts a `0` bit after these 1's. This `0` bit is referred to as the \textit{stuffed bit}. On the receiver side, the extra `0` bit is removed to retrieve the original bit stream.
+
+% Problem Statement
+\section*{Problem Statement}
+Given the following bit stream:
+\begin{center}
+    \texttt{0101011111101000000101111101}
+\end{center}
+We need to apply the bit stuffing process and indicate the positions of the stuffed bits.
+
+% Solution
+\section*{Solution}
+The given bit stream is:
+
+\begin{center}
+\texttt{0101011111101000000101111101}
+\end{center}
+
+To apply bit stuffing, we follow these steps:
+
+\begin{enumerate}
+    \item Scan the bit stream.
+    \item Insert a `0` after every sequence of five consecutive `1`s.
+\end{enumerate}
+
+Let’s highlight the five consecutive `1`s and the stuffed bits in the bit stream:
+
+\begin{tcolorbox}[colframe=blue, colback=blue!5, title=\textbf{Bit Stuffing Process}]
+Original bit stream: \texttt{010101111\textcolor{red}{111}01000000101111101}
+\begin{itemize}
+    \item Between positions 6 and 11, there is a sequence of \texttt{11111}.
+    \item After this sequence, we \textbf{insert a `0`} to avoid confusion.
+\end{itemize}
+Thus, the stuffed bit stream becomes:
+\[
+\texttt{010101111110\textcolor{red}{0}1000000101111101}
+\]
+\end{tcolorbox}
+
+% Final Answer
+\section*{Final Answer}
+After applying bit stuffing, the bit stream becomes:
+\[
+\boxed{\texttt{010101111110\textcolor{red}{0}1000000101111101}}
+\]
+The \textcolor{red}{\textbf{stuffed bit}} is highlighted in red.
+
+\vspace{1cm}
+\textit{Note:} The stuffed bit is added after every sequence of five consecutive `1`s to ensure that the control flags are not misinterpreted.
+
+\section*{Conclusion}
+Bit stuffing is a vital process for reliable communication protocols. By inserting a `0` after five consecutive `1`s, we ensure the integrity of data transmission.
+
+\end{document}

@@ -1,0 +1,142 @@
+a//for router 6
+
+interface fa0/0
+ip address 200.168.10.254 255.255.255.0
+no shut
+do wr
+
+interface fa1/0
+ip address 100.0.0.254 255.0.0.0
+no shut
+do wr
+
+interface se2/0
+ip address 150.10.0.254 255.255.0.0
+no shut
+do wr
+
+
+//for router 3
+
+interface fa0/0
+ip address 200.168.60.254 255.255.255.0
+no shut
+do wr
+
+interface se2/0
+ip address 150.10.0.254 255.255.0.0
+clock rate 64000
+no shut
+do wr
+
+interface se3/0
+ip address 150.80.0.254 255.255.255.0
+clock rate 64000
+no shut
+do wr
+
+interface se6/0
+ip address 150.20.0.254 255.255.0.0
+clock rate 64000
+no shut
+do wr
+
+interface se7/0
+ip address 150.0.50.254 255.255.0.0
+clock rate 64000
+no shut
+do wr
+
+interface se8/0
+ip address 150.60.0.254 255.255.0.0
+clock rate 64000
+no shut
+do wr
+
+
+//for router 5
+
+interface fa0/0
+ip address 200.168.50.254 255.255.255.0
+no shut
+do wr
+
+interface se3/0
+ip address 150.70.0.254 255.255.0.0
+clock rate 64000
+no shut
+do wr
+
+interface se2/0
+ip address 150.80.0.254 255.255.0.0
+no shut
+do wr
+
+
+
+//for router 2
+
+interface fa0/0
+ip address 200.168.40.254 255.255.255.0
+no shut
+do wr
+
+interface se2/0
+ip address 150.60.0.254 255.255.0.0
+clock rate 64000
+no shut
+do wr
+
+interface se6/0
+ip address 150.70.0.254 255.255.0.0
+no shut
+do wr
+
+interface se3/0
+ip address 150.30.0.254 255.255.0.0
+no shut
+do wr
+
+
+//for router 4
+
+interface fa0/0
+ip address 200.168.30.254 255.255.255.0
+no shut
+do wr
+
+interface se2/0
+ip address 150.50.0.254 255.255.0.0
+clock rate 64000
+no shut
+do wr
+
+interface se3/0
+ip address 150.40.0.254 255.255.0.0
+no shut
+do wr
+
+
+
+//for router 1
+
+interface fa0/0
+ip address 200.168.20.254 255.255.255.0
+no shut
+do wr
+
+interface se2/0
+ip address 150.20.0.254 255.255.0.0
+clock rate 64000
+no shut
+do wr
+
+interface se3/0
+ip address 150.30.0.254 255.255.0.0
+no shut
+do wr
+
+interface se6/0
+ip address 150.40.0.254 255.255.0.0
+no shut
+do wr

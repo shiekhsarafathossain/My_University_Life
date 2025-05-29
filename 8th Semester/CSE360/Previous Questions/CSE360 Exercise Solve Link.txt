@@ -1,0 +1,5 @@
+CSE360 Exercise Solve Link:
+
+1. https://www.studocu.com/ko/document/konkuk-university/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0/computerorganizaion-design-5th-solution/9639022?fbclid=IwAR3hJQYcLB3RO3aeeqyZ6GbzkiDaBnhJHQ8znIKR7S5gE7PHUNhUg_FZagM
+
+2. https://www.hellovaia.com/textbooks/computer-science/computer-organization-and-design-hardwaresoftware-interface-5th/arithmetic-for-computers/43-write-down-the-bit-pattern-in-the-fraction-of-value-13-as/

@@ -1,0 +1,13 @@
+int vlan 1
+ip helper-address 91.0.0.50
+
+int vlan 2
+ip helper-address 91.0.0.50
+
+int vlan 3
+ip helper-address 91.0.0.50
+
+int vlan 4
+ip helper-address 91.0.0.50
+
+ex

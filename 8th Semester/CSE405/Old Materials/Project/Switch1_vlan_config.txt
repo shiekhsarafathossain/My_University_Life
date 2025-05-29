@@ -1,0 +1,14 @@
+vlan 2
+vlan 3
+ex
+
+int fa0/1
+switchport mode access
+switchport access vlan 2
+ex
+
+int fa0/2
+switchport mode access
+switchport access vlan 2
+ex
+

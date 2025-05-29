@@ -1,0 +1,14 @@
+vlan 2
+vlan 3
+
+int vlan 1
+ip address 92.0.64.1 255.255.192.0
+no shutdown
+
+int vlan 2
+ip address 92.0.128.1 255.255.192.0
+no shutdown
+
+int vlan 3
+ip address 92.0.192.1 255.255.192.0
+no shutdown

@@ -1,0 +1,141 @@
+/* base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f8f9fa;
+  color: #333;
+  border-radius: 20px;
+}
+
+h1 {
+  color: #007bff;
+  text-align: center;
+}
+
+/* form elements */
+form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* action buttons */
+.view-records-btn,
+.add-record-btn {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.view-records-btn {
+  background-color: #28a745;
+}
+
+.view-records-btn:hover {
+  background-color: #218838;
+}
+
+.add-record-btn {
+  background-color: crimson;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.add-record-btn:hover {
+  background-color: #0056b3;
+}
+
+/* message styles */
+.message {
+  background-color: crimson;
+  color: white;
+  border-radius: 30px;
+  padding: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* responsive styles */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+}

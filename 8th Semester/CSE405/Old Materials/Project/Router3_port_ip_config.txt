@@ -1,0 +1,19 @@
+interface fa0/0
+ip address 133.0.0.1 255.255.252.0
+no shut
+do wr
+exit
+
+interface se2/0
+ip address 33.0.0.33 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
+
+interface se3/0
+ip address 44.0.0.44 255.255.255.0
+clock rate 64000
+no shut
+do wr
+exit
